@@ -54,7 +54,6 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://api.canair.io:8080",
   "devDependencies": {
     "gh-pages": "^6.2.0"
   }
