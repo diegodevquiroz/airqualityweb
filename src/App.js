@@ -165,7 +165,7 @@ const App = () => {
 const fetchStations = async () => {
 setLoading(true);
 try {
-  const response = await fetch(apiUrl + '/dwc/stations');
+  const response = await fetch('/dwc/stations');
   if (response.ok) {
     const data = await response.json();
     console.log("Stations data:", data); // Imprime los datos de estaciones en consola
