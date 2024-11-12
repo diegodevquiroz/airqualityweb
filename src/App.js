@@ -12,6 +12,7 @@ import humedadGif from './imagenes/humedad.gif';
 import StationSidebar from './StationSidebar';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
+const apiUrl = 'http://api.canair.io:8080';
 
 // Componente CustomPopup
 const CustomPopup = ({ station, districtName, measurements }) => {
@@ -164,7 +165,7 @@ const App = () => {
 const fetchStations = async () => {
 setLoading(true);
 try {
-  const response = await fetch('/dwc/stations');
+  const response = await fetch(apiUrl + '/dwc/stations');
   if (response.ok) {
     const data = await response.json();
     console.log("Stations data:", data); // Imprime los datos de estaciones en consola
